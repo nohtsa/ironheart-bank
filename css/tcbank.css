@@ -1,0 +1,179 @@
+#contentTitle {
+	font-family: wiz-fancy;
+	background-image: url('../img/staff-header-wizard101.gif');
+	background-repeat: no-repeat;
+	background-position:center left 99px;
+	color: #673f16;
+	font-size:32px;
+	text-align: center;
+}
+
+#inventoryTable {
+	width:635px;
+	height:353px;
+	background-image: url('../img/w101back.png');
+	background-size:cover;
+}
+#dataTable {
+	width:230px;
+	height:300px;
+	background-image: url('../img/dataBack.png')
+}
+#dataDiv {
+	margin:auto;
+	width:230px;
+	height:300px;
+	background-image: url('../img/dataBack.png');
+}
+
+#tciBanner .clearBanner_Middle {
+	width:600px;
+}
+#redBox-tc {
+	margin:auto;
+	width:659px;
+}
+
+
+#tcfBanner .clearBanner_Middle {
+	width:235px;
+}
+#tcf-info {
+	width:254px;
+	margin:auto;
+	height:25px;
+	line-height:0px;
+	
+}
+#greenBox-form {
+	width:254px;
+	
+}
+
+#tc-form {
+	margin:auto;
+	
+}
+#form-seg-1 {
+	padding-bottom:5px;
+}
+#form-seg-1 input {
+	width:180px;
+}
+#form-seg-2 {
+	padding-bottom:5px;
+}
+#form-seg-2 input {
+	width:150px;
+	
+}
+#formBox {
+	width:180px;
+	margin:auto;
+	margin-top:15px;
+}
+
+#amount {
+	width:70px;
+}
+#time {
+	display:none;
+}
+#reset {
+	background-color: transparent;
+	border: none;
+	width:18px;
+	height:25px;
+	margin:auto;
+}
+#reset .buttonBox {
+	width:50px;
+}
+#formButtons {
+	display:flex;
+	width:175px;
+	gap:20px;
+	margin:auto;
+	height:25px;
+}
+#submitButton {
+	width:29px;
+	height:25px;
+	
+}
+#submitButton .buttonBox {
+	width:100px;
+}
+
+
+
+
+#tcdBanner .clearBanner_Middle {
+	width:235px;
+}
+#blueBox-data {
+	height:300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* red box tuning */
+#rb-tl-inventory {}/*id="tc-tl "*/
+#rb-tm-inventory {width:635px;}/*id="tc-tm" */
+#rb-tr-inventory {}/*id="tc-tr" */
+/*---*/
+#rb-l-inventory {height:353px;}/*id="tc-l" */
+#rb-m-inventory {width:635px;}/*id="tc-m" */
+#rb-r-inventory {height:353px;}/*id="tc-r" */
+/*---*/
+#rb-bl-inventory {}/*id="tc-bl" */
+#rb-bm-inventory {width:635px;}/*id="tc-bm" */
+#rb-br-inventory {}/*id="tc-br" */
+
+/* green box tuning */
+#gb-tl-form {}/*id="tc-tl "*/
+#gb-tm-form {width:230px;}/*id="tc-tm" */
+#gb-tr-form {}/*id="tc-tr" */
+/*---*/
+#gb-l-form {height:215px;}/*id="tc-l" */
+#gb-m-form {width:230px;}/*id="tc-m" */
+#gb-r-form {height:215px;}/*id="tc-r" */
+/*---*/
+#gb-bl-form {}/*id="tc-bl" */
+#gb-bm-form {width:230px;}/*id="tc-bm" */
+#gb-br-form {}/*id="tc-br" */
+
+/* blue box tuning */
+#bb-tl-data {}/*id="tc-tl "*/
+#bb-tm-data {width:230px;}/*id="tc-tm" */
+#bb-tr-data {}/*id="tc-tr" */
+/*---*/
+#bb-l-data {height:300px;}/*id="tc-l" */
+#bb-m-data {width:230px;}/*id="tc-m" */
+#bb-r-data {height:300px;}/*id="tc-r" */
+/*---*/
+#bb-bl-data {}/*id="tc-bl" */
+#bb-bm-data {width:230px;}/*id="tc-bm" */
+#bb-br-data {}/*id="tc-br" */

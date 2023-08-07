@@ -1,0 +1,259 @@
+.boxContainer {
+	margin:auto;
+}
+.redContainer_Flex {
+	display:flex;
+}
+.redBox_Top_Left {
+	background-image:url('../img/boxcornerheadersprite.png');
+	background-position:0px 0px;
+	width:12px;
+	height:8px;
+}
+.redBox_Top_Middle {
+	background-image:url('../img/boxhorizontalsprite.png');
+	background-repeat: repeat-x;
+	background-position:0px 0px;
+	width:100%;
+	height:8px;
+}
+.redBox_Top_Right {
+	background-image:url('../img/boxcornerheadersprite.png');
+	background-position:-12px 0px;
+	width:12px;
+	height:8px;
+}
+.redBox_Left {
+	background-image:url('../img/boxverticalsprite.png');
+	background-position:0px 0px;
+	background-repeat: repeat-y;
+	width:12px;
+}
+.redBox_Content {
+	background-image: url('../img/redparchment_pattern.gif');
+	background-repeat:repeat;
+}
+.redBox_Right {
+	background-image:url('../img/boxverticalsprite.png');
+	background-position:-12px 0px;
+	background-repeat: repeat-y;
+	width:12px;
+}
+.redBox_Bottom_Left {
+	background-image:url('../img/boxcornerheadersprite.png');
+	background-position:0px -8px;
+	width:12px;
+	height:13px;
+}
+.redBox_Bottom_Middle {
+	background-image:url('../img/boxhorizontalsprite.png');
+	background-repeat: repeat-x;
+	background-position:0px -8px;
+	width:100%;
+	height:13px;
+}
+.redBox_Bottom_Right {
+	background-image:url('../img/boxcornerheadersprite.png');
+	background-position:-12px -8px;
+	width:12px;
+	height:13px;
+}
+/* Red Box Template
+🔥 Red box tuning 🔥
+
+#rb-tl {}
+#rb-tm {width:50px;}
+#rb-tr {}
+
+#rb-l {height:50px;}
+#rb-m {width:50px;}
+#rb-r {height:50px;}
+
+#rb-bl {}
+#rb-bm {width:50px;}
+#rb-br {}
+
+🔥 Red box tuning id 🔥
+
+id="rb-tl" 
+id="rb-tm" 
+id="rb-tr" 
+
+id="rb-l" 
+id="rb-m" 
+id="rb-r" 
+
+id="rb-bl" 
+id="rb-bm" 
+id="rb-br" 
+*/
+
+.greenContainer_Flex {
+	display:flex;
+}
+.greenBox_Top_Left {
+	background-image:url('../img/boxcornerheadersprite.png');
+	background-position:-48px 0px;
+	width:12px;
+	height:8px;
+}
+.greenBox_Top_Middle {
+	background-image:url('../img/boxhorizontalsprite.png');
+	background-repeat: repeat-x;
+	background-position:0px -21px;
+	height:8px;
+}
+.greenBox_Top_Right {
+	background-image:url('../img/boxcornerheadersprite.png');
+	background-position:-60px 0px;
+	width:12px;
+	height:8px;
+}
+.greenBox_Left {
+	background-image:url('../img/boxverticalsprite.png');
+	background-position:-24px 0px;
+	background-repeat: repeat-y;
+	width:12px;
+}
+.greenBox_Content {
+	background-image: url('../img/greenparchment_pattern.gif');
+	background-repeat:repeat;
+}
+.greenBox_Right {
+	background-image:url('../img/boxverticalsprite.png');
+	background-position:-36px 0px;
+	background-repeat: repeat-y;
+	width:12px;
+}
+.greenBox_Bottom_Left {
+	background-image:url('../img/boxcornerheadersprite.png');
+	background-position:-48px -8px;
+	width:12px;
+	height:13px;
+}
+.greenBox_Bottom_Middle {
+	background-image:url('../img/boxhorizontalsprite.png');
+	background-repeat: repeat-x;
+	background-position:0px -29px;
+	height:13px;
+}
+.greenBox_Bottom_Right {
+	background-image:url('../img/boxcornerheadersprite.png');
+	background-position:-60px -8px;
+	width:12px;
+	height:13px;
+}
+/* Green Box Template
+🔥 Green box tuning 🔥
+
+#gb-tl {}
+#gb-tm {width:50px;}
+#gb-tr {}
+
+#gb-l {height:50px;}
+#gb-m {width:50px;}
+#gb-r {height:50px;}
+
+#gb-bl {}
+#gb-bm {width:50px;}
+#gb-br {}
+
+🔥 Green box tuning id 🔥
+
+id="gb-tl" 
+id="gb-tm" 
+id="gb-tr" 
+
+id="gb-l" 
+id="gb-m" 
+id="gb-r" 
+
+id="gb-bl" 
+id="gb-bm" 
+id="gb-br" 
+*/
+
+.blueContainer_Flex {
+	display:flex;
+}
+.blueBox_Top_Left {
+	background-image:url('../img/boxcornerheadersprite.png');
+	background-position:-24px 0px;
+	width:12px;
+	height:8px;
+}
+.blueBox_Top_Middle {
+	background-image:url('../img/boxhorizontalsprite.png');
+	background-repeat: repeat-x;
+	background-position:0px -42px;
+	height:8px;
+}
+.blueBox_Top_Right {
+	background-image:url('../img/boxcornerheadersprite.png');
+	background-position:-36px 0px;
+	width:12px;
+	height:8px;
+}
+.blueBox_Left {
+	background-image:url('../img/boxverticalsprite.png');
+	background-position:-48px 0px;
+	background-repeat: repeat-y;
+	width:12px;
+}
+.blueBox_Content {
+	background-image: url('../img/blueparchment_pattern.gif');
+	background-repeat:repeat;
+}
+.blueBox_Right {
+	background-image:url('../img/boxverticalsprite.png');
+	background-position:-60px 0px;
+	background-repeat: repeat-y;
+	width:12px;
+}
+.blueBox_Bottom_Left {
+	background-image:url('../img/boxcornerheadersprite.png');
+	background-position:-24px -8px;
+	width:12px;
+	height:13px;
+}
+.blueBox_Bottom_Middle {
+	background-image:url('../img/boxhorizontalsprite.png');
+	background-repeat: repeat-x;
+	background-position:0px -50px;
+	height:13px;
+}
+.blueBox_Bottom_Right {
+	background-image:url('../img/boxcornerheadersprite.png');
+	background-position:-36px -8px;
+	width:12px;
+	height:13px;
+}
+/* Blue Box Template
+🔥 Blue box tuning 🔥
+
+#bb-tl {}
+#bb-tm {width:50px;}
+#bb-tr {}
+
+#bb-l {height:50px;}
+#bb-m {width:50px;}
+#bb-r {height:50px;}
+
+#bb-bl {}
+#bb-bm {width:50px;}
+#bb-br {}
+
+🔥 Blue box tuning id 🔥
+
+id="bb-tl" 
+id="bb-tm" 
+id="bb-tr" 
+
+id="bb-l" 
+id="bb-m" 
+id="bb-r" 
+
+id="bb-bl" 
+id="bb-bm" 
+id="bb-br" 
+*/

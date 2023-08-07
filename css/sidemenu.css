@@ -1,0 +1,103 @@
+/*side bar*/
+#sidebar {
+	z-index:20;
+	position:fixed;
+	top:0;
+	width:205px;
+	min-height:200px;
+	height:200px;
+}
+#sideLogo {
+	margin-left:21px;
+	
+}
+#logo {
+	background-image: url('../img/sidemenu/sidemenulogo.png');
+	background-repeat:no-repeat;
+	background-position:left top;
+	position:absolute;
+	top:0;
+	width:178px;
+	height:104px;
+	cursor:pointer;
+}
+#logo:hover {
+	background-repeat:no-repeat;
+	background-position:left -104px;
+	width:178px;
+	height:104px;
+	cursor:pointer
+}
+
+#sidemenu {
+	padding-left:1px;
+}
+#sideMenuTop{
+	background-image: url('../img/sidemenu/sidemenu_top.png');
+	background-repeat: no-repeat;
+	margin-top:80px;
+	width:205px;
+	height:29px;
+}
+#sideMenuMiddle {
+	background-image: url('../img/sidemenu/sidemenu_pattern.png');
+	background-repeat: repeat-y;
+	width:205px;
+	min-height:43px;
+}
+#sideMenuBottom {
+	background-image: url('../img/sidemenu/sidemenu_bottom.gif');
+	background-repeat: no-repeat;
+	width:205px;
+	height:21px;
+}
+
+#loginButton {
+	background-image:url('../img/sidemenu/sidemenu_bigbutton.png');
+	background-position:0px 114px;
+	font-family:wiz-fancy;
+	color:#f9d539;
+	text-align:center;
+	font-size:30px;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	width:205px;
+	height:57px;
+	margin-top:-3px;
+}
+#loginButton span{
+	margin-left:10px;
+	line-height:55px;
+}
+#loginButton:hover {
+	background-position:0px 57px;
+	color:#FFFFFF;
+}
+
+.sideMenuBanner {
+	width:205px;
+	height:43px;
+	background-image: url('../img/sidemenu/sidemenu_title.gif');
+	background-position:0px 86px;
+	margin-top:-6px;
+	color: #673f16;
+}
+.sideMenuBanner:hover {
+	background-position:0px 43px;
+	color:#000000;
+	text-decoration: none;
+}
+
+.sideMenuBanner span {
+	width:205px;
+	height:43px;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	text-decoration: none;
+	font-weight:bold;
+	font-size:13px;
+	margin-left:30px;
+	line-height: 40px;
+}
+.sideMenuBanner a:hover {
+	width:205px;
+	height:43px;
+}

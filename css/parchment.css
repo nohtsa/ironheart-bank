@@ -1,0 +1,206 @@
+#parchment {
+	margin:auto;
+	margin-left:128px;
+	width:848px;
+	display: flex;
+	flex-direction: column;
+	position:relative;
+}
+/**↓** parchment top **↓**/
+#parchTop {
+	height:21px;
+	width:100%;
+	margin: auto;
+	display: flex;
+	gap: 0px;
+}
+/*-----*/
+#parchTopLeft {
+	display: flex;
+	max-width:150px;
+}
+#parchTopLeft_Left {
+	background-image: url('../img/parchment/contenttop_left.png');
+	background-repeat: no-repeat;
+	display:inline;
+	height:21px;
+	width:87px
+}
+#parchTopLeft_Right {
+	background-image: url('../img/parchment/contenttop_left2.png');
+	background-repeat: no-repeat;
+	display:inline;
+	height:21px;
+	width:63px
+}
+/*-----*/
+#parchTopMiddle {
+	background-image: url('../img/parchment/contenttop_middle.png');
+	background-repeat: repeat-x;
+	height:21px;
+	width:100%;
+}
+/*-----*/
+#parchTopRight {
+	display: flex;
+	max-width:150px;
+	margin: auto;
+}
+#parchTopRight_Left {
+	background-image: url('../img/parchment/contenttop_right.png');
+	background-repeat: no-repeat;
+	display:inline;
+	height:21px;
+	width:87px
+}
+#parchTopRight_Right {
+	background-image: url('../img/parchment/contenttop_right2.png');
+	background-repeat: no-repeat;
+	display:inline;
+	height:21px;
+	width:63px
+}
+/**↓** parchment top(2) **↓**/
+#parchTop2 {
+	position:relative;
+	max-width:1000px;
+	width:100%;
+	margin:auto;
+	z-index:2;
+}
+/*-----*/
+#parchTop2_Left {
+	background-image: url('../img/parchment/contenttop_left3.png');
+	background-repeat: no-repeat;
+	height:67px;
+	width:87px;
+	z-index: 2;
+	position:absolute;
+	left:0;
+}
+#parchTop2_Right {
+	background-image: url('../img/parchment/contenttop_right3.png');
+	background-repeat: no-repeat;
+	height:67px;
+	width:87px;
+	z-index:2;
+	position: absolute;
+	right:0;
+}
+/**↓** parchment middle **↓**/
+#parchMiddle {
+	width:100%;
+	display: flex;
+	gap: 0px;
+	min-height:848px;
+	position:relative;
+}
+/*-----*/
+#parchMiddle_left {
+	background-image: url('../img/parchment/contentbottom_left.png');
+	background-repeat: repeat-y 0 67px;
+	z-index: 1;
+	width:87px;
+	margin-top:65px;
+	left:0;
+	position: relative;
+	
+}
+#parchMiddle_Center {
+	background-image: url('../img/parchment/contentpattern.jpg');
+	background-repeat: repeat;
+	width:674px;
+	z-index:2;
+	position: relative;
+}
+#parchMiddle_Right {
+	background-image: url('../img/parchment/contentbottom_right.png');
+	background-repeat: repeat-y 0 67px;
+	z-index: 1;
+	width:87px;
+	margin-top:65px;
+	right:0;
+	position: relative;
+}
+/**↓** parchment bottom **↓**/
+#parchBottom {
+	position:relative;
+	width:100%;
+	margin:auto;
+	z-index:2;
+}
+/*-----*/
+#parchBottom_left {
+	background-image: url('../img/parchment/scrollbottom_left.png');
+	background-repeat:no-repeat;
+	bottom:0;
+	height:85px;
+	left:0;
+	position:absolute;
+	width:87px;
+}
+#parchBottom_Right {
+	background-image: url('../img/parchment/scrollbottom_right.png');
+	background-repeat:no-repeat;
+	bottom:0;
+	height:85px;
+	right:0;
+	position:absolute;
+	width:87px;
+}
+/**↓** parchment bottom(2) **↓**/
+#parchBottom2 {
+	height:21px;
+	width:100%;
+	margin: auto;
+	display: flex;
+	gap: 0px;
+}
+#parchBottom2_Left {
+	display: flex;
+	width:150px;
+}
+#parchBottom2_Left_Left{
+	background-image: url('../img/parchment/scrollbottom_left2.png');
+	background-repeat: no-repeat;
+	display:inline;
+	height:21px;
+	width:87px;
+}
+#parchBottom2_Left_Right {
+	background-image: url('../img/parchment/scrollbottom_left3.png');
+	background-repeat: no-repeat;
+	display:inline;
+	top:0;
+	height:21px;
+	width:63px;
+}
+/*-----*/
+#parchBottom_Middle {
+	background-image: url('../img/parchment/scrollbottom_middle.png');
+	background-repeat: repeat-x;
+	font-size:0;
+	height:21px;
+	width:100%;
+}
+/*-----*/
+#parchBottom2_Right {
+	display: flex;
+	right:0;
+	width:150px;
+	margin: auto;
+	gap:0;
+}
+#parchBottom2_Right_Left {
+	background-image: url('../img/parchment/scrollbottom_right2.png');
+	background-repeat: no-repeat;
+	height:21px;
+	width:87px;
+}
+#parchBottom2_Right_Right {
+	background-image: url('../img/parchment/scrollbottom_right3.png');
+	background-repeat: no-repeat;
+	display:inline;
+	height:21px;
+	width:63px;
+}

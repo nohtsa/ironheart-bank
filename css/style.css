@@ -1,0 +1,148 @@
+::-webkit-scrollbar {
+  display: none;
+}
+@font-face {
+	font-family: wiz-fancy;
+	src: url('../wizard_fancy.ttf');
+}
+body{
+	background-color: #2e58ae;
+	background-image:  url('../img/top_background.png'), url('../img/bottom_background1.jpg');
+	background-repeat: repeat-x, repeat-x;
+	background-position: top 0px left 0px, bottom 0px left 0px;
+	background-attachment: fixed;
+}
+#titleBox {
+	height:110px;
+	width:100%;
+	margin-top:39px;
+	background-image: url('../img/staff-header-wizard101.gif');
+	background-repeat:no-repeat;
+	background-position:center;
+}
+#titleBox h1 {
+	font-family: wiz-fancy;
+	color: #673f16;
+	font-size:32px;
+	text-align: center;
+	margin-top:0;
+	margin-bottom:6px;
+	
+}
+a {
+	text-decoration: none;
+}
+p {
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	font-size:14px;
+	color:#673f16;
+}
+label {
+	color:#ffff14;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	font-size:15px;
+}
+button {
+	 background-color: transparent;
+	 border: none;
+}
+#footer {
+	height:100px;
+}
+.border {
+	border: solid red 1px;
+	color:#FFFFFF;
+}
+.temp-block {
+	height:25px;
+	width:100%;
+	background-color:#FFFFFF;
+	border: solid red 1px;
+}
+/****Start of content****/
+#content-wrapper {
+	position:relative;
+	display:flex;
+	width:1100px;
+	padding-top:2px;
+	padding-left:105px;
+	margin:auto;
+}
+#middleContent_Head {}
+#middleContent_Middle {}
+#middleContent_Bottom {}
+
+.contentDivide {
+	display:flex;
+	gap:0;
+	width:100%;
+	height:390px;
+}
+.divideLeft {
+	display:flex;
+	flex-direction: column;
+	width:331px;
+	height:335px;
+	margin:auto;
+	
+}
+.divideRight {
+	display:flex;
+	flex-direction: column;
+	width:331px;
+	height:335px;
+	margin:auto;
+	
+}
+
+
+
+.buttonBox {
+	display:flex;
+	width:100%;
+}
+.buttonBox:hover .buttonLeft {
+	background-image: url('../img/wizardButton.png');
+	background-position:0px -25px;
+	height:25px;
+	width:4px;
+}
+.buttonBox:hover .buttonMiddle {
+	background-image: url('../img/wizardButton.png');
+	background-position:-4px -25px;
+	height:25px;
+	min-width:4px;
+	color:#FFFFFF;
+}
+.buttonBox:hover .buttonRight {
+	background-image: url('../img/wizardButton.png');
+	background-position:-401px -25px;
+	height:25px;
+	width:4px;
+}
+
+
+.buttonLeft {
+	background-image: url('../img/wizardButton.png');
+	background-position:0px 0px;
+	height:25px;
+	width:4px;
+}
+.buttonMiddle {
+	background-image: url('../img/wizardButton.png');
+	background-position:-4px 0px;
+	height:25px;
+	min-width:4px;
+	width:100%;
+	color: #f5e2a8;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	font-weight:bold;
+}
+.buttonRight {
+	background-image: url('../img/wizardButton.png');
+	background-position:-401px 0px;
+	height:25px;
+	width:4px;
+}
+
+
