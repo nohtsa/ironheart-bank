@@ -1,0 +1,257 @@
+<!DOCTYOPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <base target="_top">
+<title>Ironheart Bank | Wizard101 Free Online Game</title>
+	<link rel="icon" href="img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/parchment.css"/>
+	<link rel="stylesheet" type="text/css" href="css/sidemenu.css"/>
+	<link rel="stylesheet" type="text/css" href="css/banners.css"/>
+	<link rel="stylesheet" type="text/css" href="css/box.css" />
+	<link rel="stylesheet" type="text/css" href="css/tcbank.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script>
+		function getTime() {
+			document.getElementById("time").value = Date();
+		}
+	</script>
+</head>
+<body>
+<div id="content-wrapper">
+	<div id="sidebar">
+		<div id="sideLogo">
+			<a href="https://www.wizard101.com/"><div id="logo"></div></a>
+		</div>
+		<div id="sideMenu">
+			<div>
+				<div id="sideMenuTop"></div>
+				<div id="sideMenuMiddle">
+					<a href="https://www.wizard101.com/game?context=subscribe"><div id="loginButton"><span>Login</span></div></a>
+					<a href="https://twitter.com/theatmoplex?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><div class="sideMenuBanner"><span>Atmoplex Twitter</span></div></a>
+					<a href="https://www.wizard101central.com/wiki/Wizard101_Wiki"><div class="sideMenuBanner"><span>Wizard101 Wiki</span></div></a>
+				</div>
+				<div id="sideMenuBottom"></div>
+			</div>
+			
+		</div>
+	</div>
+	<!---->
+	<div id="parchment">
+		<div id="parchTop">
+			<div id="parchTopLeft">
+				<div id="parchTopLeft_Left"></div>
+				<div id="parchTopLeft_Right"></div>
+			</div>
+			<!---->
+			<div id="parchTopMiddle"></div>
+			<!---->
+			<div id="parchTopRight">
+				<div id="parchTopRight_Right"></div>
+				<div id="parchTopRight_left"></div>
+			</div>
+		</div>
+		<!---->
+		<div id="parchTop2">
+			<div id="parchTop2_Left"></div>
+			<div id="parchTop2_Right"></div>
+		</div>
+		<!---->
+		<div id="parchMiddle">
+			<div id="parchMiddle_left"></div>
+			<div id="parchMiddle_Center">
+				<div id="middleContent_Head">
+					<div id="titleBox">
+						<h1>Wizard101</h1>
+						<h1>Ironheart Bank</h1>
+					</div>
+				</div>
+				<div id="middleContent_Middle">
+					
+					<div class="contentDivide">
+						<div class="divideLeft">
+							<div id="tcfBanner" class="clearBanner">
+								<div class="clearBanner_Left"></div>
+								<div class="clearBanner_Middle"><span>Treasure Card Transaction</span></div>
+								<div class="clearBanner_Right"></div>
+							</div>
+							<div id="tcf-info">
+								<p><b>Note:</b>Variation isn't required.</p>
+							</div>
+							
+							<div class="boxContainer" id="greenbox-form">
+								<div class="greenContainer_Flex">
+									<div id="gb-tl-form" class="greenBox_Top_Left"></div>
+									<div id="gb-tm-form" class="greenBox_Top_Middle"></div>
+									<div id="gb-tr-form" class="greenBox_Top_Right"></div>
+								</div>
+								<div class="greenContainer_Flex">
+									<div id="gb-l-form" class="greenBox_Left"></div>
+									<div id="gb-m-form" class="greenBox_Content">
+										
+										<div id="formBox">
+											<form id="tc-form" name="submit-to-google-sheet">
+												
+												<div id="form-seg-1">
+													<label for="Account">Card Holder:</label><br>
+													<input type="text" id="account" name="Account" placeholder="Account" required>
+													<input type="text" id="character" name="Character" placeholder="Character" required>
+												</div>
+												<div id="form-seg-2">
+													<label for="treasure-card">Card Details:</label><br>
+													<input type="text" id="treasure-card" name="Treasure Card" placeholder="Treasure Card" required>
+													<input type="text" id="variation" name="Variation" placeholder="Variation">
+												</div>
+												<input type="number" id="amount" name="Amount" placeholder="Amount" required>
+												<input type="text" id="time" name="Time" step="1" readonly>
+												<br>
+												
+											
+										</div>
+									</div>
+									<div id="gb-r-form" class="greenBox_Right"></div>
+								</div>
+								<div class="greenContainer_Flex">
+									<div id="gb-bl-form" class="greenBox_Bottom_Left"></div>
+									<div id="gb-bm-form" class="greenBox_Bottom_Middle"></div>
+									<div id="gb-br-form" class="greenBox_Bottom_Right"></div>
+								</div>
+							</div>
+							<div id="formButtons">
+								<button type="submit" id="submitButton" onclick="getTime()"><div class="buttonBox">
+													
+									<div class="buttonLeft"></div>
+									<div class="buttonMiddle">Submit</div>
+									<div class="buttonRight"></div>
+													
+									</div></button>
+									<br>
+								<button id="reset" type="reset"><div class="buttonBox">
+													
+									<div class="buttonLeft"></div>
+									<div class="buttonMiddle">Reset</div>
+									<div class="buttonRight"></div>
+													
+									</div></button>
+							</div>
+							</form>
+						</div>
+						<div class="divideRight">
+							<div id="tcdBanner"class="clearBanner">
+								<div class="clearBanner_Left"></div>
+								<div class="clearBanner_Middle"><span>Treasure Card Sums</span></div>
+								<div class="clearBanner_Right"></div>
+							</div>
+							<div class="boxContainer" id="blueBox-data">
+								<div class="blueContainer_Flex">
+									<div id="bb-tl-data" class="blueBox_Top_Left"></div>
+									<div id="bb-tm-data" class="blueBox_Top_Middle"></div>
+									<div id="bb-tr-data" class="blueBox_Top_Right"></div>
+								</div>
+								<div class="blueContainer_Flex">
+									<div id="bb-l-data" class="blueBox_Left"></div>
+									<div id="bb-m-data" class="blueBox_Content">
+										<div id="dataDiv" ><iframe frameBorder="0" id="dataTable"  src="https://docs.google.com/spreadsheets/d/1JgprldWF5dUpQMX45S9fAikjTgBkBCFpMcnVvHTKQz4/htmlembed/sheet?gid=571947320&range=A:B"></iframe></div>
+									</div>
+									<div id="bb-r-data" class="blueBox_Right"></div>
+								</div>
+								<div class="blueContainer_Flex">
+									<div id="bb-bl-data" class="blueBox_Bottom_Left"></div>
+									<div id="bb-bm-data" class="blueBox_Bottom_Middle"></div>
+									<div id="bb-br-data" class="blueBox_Bottom_Right"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="tciBanner" class="clearBanner">
+						<div class="clearBanner_Left"></div>
+						<div class="clearBanner_Middle"><span>Treasure Card Inventory</span></div>
+						<div class="clearBanner_Right"></div>
+					</div>
+					<div class="boxContainer" id="redBox-tc">
+						<div class="redContainer_Flex">
+							<div id="rb-tl-inventory" class="redBox_Top_Left"></div>
+							<div id="rb-tm-inventory" class="redBox_Top_Middle"></div>
+							<div id="rb-tr-inventory" class="redBox_Top_Right"></div>
+						</div>
+						<div class="redContainer_Flex">
+							<div id="rb-l-inventory" class="redBox_Left"></div>
+							<div id="rb-m-inventory" class="redBox_Content"><iframe frameBorder="0" marginwidth="0" id="inventoryTable"  src="https://docs.google.com/spreadsheets/d/1JgprldWF5dUpQMX45S9fAikjTgBkBCFpMcnVvHTKQz4/htmlembed/sheet?gid=1189171639&range=A:E"></iframe></div>
+							<div id="rb-r-inventory" class="redBox_Right"></div>
+						</div>
+						<div class="redContainer_Flex">
+							<div id="rb-bl-inventory" class="redBox_Bottom_Left"></div>
+							<div id="rb-bm-inventory" class="redBox_Bottom_Middle"></div>
+							<div id="rb-br-inventory" class="redBox_Bottom_Right"></div>
+						</div>
+					</div>
+					
+				</div>
+				<div id="middleContent_Bottom">
+					<div id="footer"></div>
+				</div>
+			</div>
+			<div id="parchMiddle_Right"></div>
+		</div>
+		<!---->
+		<div id="parchBottom">
+			<div id="parchBottom_Left"></div>
+			<div id="parchBottom_Right"></div>
+		</div>
+		<!---->
+		<div id="parchBottom2">
+			<div id="parchBottom2_Left">
+				<div id="parchBottom2_Left_Left"></div>
+				<div id="parchBottom2_Left_Right"></div>
+			</div>
+			<!---->
+			<div id="parchBottom_Middle"></div>
+			<!---->
+			<div id="parchBottom2_Right">
+				<div id="parchBottom2_Right_Right"></div>
+				<div id="parchBottom2_Right_Left"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyXdt2VeSvPLp2dWz4NU4tRr3Gg4iN4ZLT2RdJKiw1FLKRL564se4Ck89Ga8bxRs7GD/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => document.getElementById('inventoryTable').src += '')
+		.then(response => document.getElementById('dataTable').src += '')
+		//.then(response => console.log('Success!', response))
+        //.catch(error => console.error('Error!', error.message));
+		//document.getElementById('inventoryTable').src += '';
+		
+    });
+</script>
+<script>
+function onLoadHandler() {
+    console.clear();
+}
+</script>
+</body>
+</html>
+
+<!--
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <base target="_top">
+  </head>
+  <body>
+    <p>peepee</p>
+  </body>
+</html>
+
+-->
