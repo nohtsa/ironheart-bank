@@ -1,0 +1,36 @@
+
+/* Clear Banner (banner without details underneath) */
+.clearBanner {
+	display:flex;
+	gap:0;
+	/*padding-top:10px;*/
+	max-width:848px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.clearBanner_Left {
+	background-image: url('../img/boxcornerheadersprite.png');
+	background-repeat:no-repeat;
+	width:48px;
+	height:35px;
+	background-position:0px -87px;
+}
+.clearBanner_Middle {
+	background-image: url('../img/boxhorizontalsprite.png');
+	background-repeat:repeat-x;
+	max-width:754px;
+	height:35px;
+	background-position:0px -177px;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	color:#673f16;
+	font-weight:600;
+	text-align:center;
+}
+
+.clearBanner_Right {
+	background-image: url('../img/boxcornerheadersprite.png');
+	background-repeat:no-repeat;
+	width:48px;
+	height:35px;
+	background-position:-46px -87px;
+}
