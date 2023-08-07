@@ -7,7 +7,7 @@
 }
 body{
 	background-color: #2e58ae;
-	background-image:  url('https://raw.githubusercontent.com/osteointolerant/tc-bank/main/img/top_background.png'), url('../img/bottom_background1.jpg');
+	background-image:  url('https://raw.githubusercontent.com/osteointolerant/tc-bank/main/img/top_background.png'), url('https://raw.githubusercontent.com/osteointolerant/tc-bank/main/img/bottom_background1.jpg');
 	background-repeat: repeat-x, repeat-x;
 	background-position: top 0px left 0px, bottom 0px left 0px;
 	background-attachment: fixed;
