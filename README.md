@@ -1,5 +1,9 @@
 # TC Inventory:
 TC Inventory is a personal project tool I made to help index and keep track of treasure cards over several accounts.
+
+## Link
+https://nohtsa.github.io/tc-inventory/
+
 ## Features:
 - Keep tabs on treasure card amounts and which characters hold which.
 - Add and remove any quantities
