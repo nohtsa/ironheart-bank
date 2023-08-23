@@ -3,6 +3,7 @@ TC Inventory is a personal project tool I made to help index and keep track of t
 ## Features:
 - Keep tabs on treasure card amounts and which characters hold which.
 - Add and remove any quantities
+- Logged treasure cards work as links to the wizard101 wiki of that treasure card.
 - See profile images of treasure cards as you go. **(Note: this feature is only allowed on the offline version.)**
 
 ## How to use:
