@@ -18,9 +18,14 @@ As you fill out the account and character sections, the first treasure card form
 
 ![image](https://github.com/nohtsa/tc-inventory/assets/19295987/9af7fbad-88c3-4134-af19-f32da429473a)
 
- As you submit the treasure card forms the inventory table and total table will populate with the information.
+ As you submit the treasure card forms the inventory table and total table will populate with the information. 
 
 ![image](https://github.com/nohtsa/tc-inventory/assets/19295987/9bda597e-f403-4a59-a079-d064c43b80cb)![image](https://github.com/nohtsa/tc-inventory/assets/19295987/6dfd6ce6-1354-4da7-bc51-82ba7396889a)
+
+After submitting the form will automaticcally empty itself, but keep the account and character information for continuous submissions. If you use the reset forms button it will clear everything, but the last account entered, for moving to different characters.
+
+![image](https://github.com/nohtsa/tc-inventory/assets/19295987/b1c9e8de-81c7-43b0-a1e5-2eb5a8c9544f)
+
 
 When you are done entering treasure cards on the top left of the page are the save options. 
 
