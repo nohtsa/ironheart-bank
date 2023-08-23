@@ -7,10 +7,15 @@
 }
 body{
 	background-color: #2e58ae;
-	background-image:  url('https://raw.githubusercontent.com/osteointolerant/tc-bank/main/img/top_background.png'), url('https://raw.githubusercontent.com/osteointolerant/tc-bank/main/img/bottom_background1.jpg');
+	background-image:  url('../img/top_background.png'), url('../img/bottom_background1.jpg');
 	background-repeat: repeat-x, repeat-x;
 	background-position: top 0px left 0px, bottom 0px left 0px;
 	background-attachment: fixed;
+	cursor: url('../img/cursor.png'), auto;
+	height:100%;
+}
+body:active {
+	cursor: url('../img/cursor-small.png'), auto;
 }
 #titleBox {
 	height:110px;
@@ -31,6 +36,19 @@ body{
 }
 a {
 	text-decoration: none;
+	cursor: url('../img/cursor-blue.png'), auto;
+}
+a:active {
+	cursor: url('../img/cursor-blue-small.png'), auto;
+}
+button {
+	cursor: url('../img/cursor-white.png'), auto;
+}
+button:active {
+	cursor: url('../img/cursor-white-small.png'), auto;
+}
+input {
+	cursor: url('../img/cursor-high.png'), auto;
 }
 p {
 	font-family: "Comic Sans MS", "Comic Sans", cursive;
@@ -41,12 +59,14 @@ label {
 	color:#ffff14;
 	font-family: "Comic Sans MS", "Comic Sans", cursive;
 	font-size:15px;
+	cursor: url('../img/cursor.png'), auto;
 }
 button {
 	 background-color: transparent;
 	 border: none;
 }
 #footer {
+	padding-top:100px;
 	height:100px;
 }
 .border {
@@ -69,7 +89,8 @@ button {
 	margin:auto;
 }
 #middleContent_Head {}
-#middleContent_Middle {}
+#middleContent_Middle {
+}
 #middleContent_Bottom {}
 
 .contentDivide {
@@ -77,6 +98,8 @@ button {
 	gap:0;
 	width:100%;
 	height:390px;
+	margin-bottom:150px;
+	margin-top:50px;
 }
 .divideLeft {
 	display:flex;
@@ -136,6 +159,7 @@ button {
 	width:100%;
 	color: #f5e2a8;
 	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	font-size:15px;
 	font-weight:bold;
 }
 .buttonRight {

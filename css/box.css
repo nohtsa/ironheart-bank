@@ -257,3 +257,176 @@ id="bb-bl"
 id="bb-bm" 
 id="bb-br" 
 */
+
+
+.purpleContainer_Flex {
+	display:flex;
+}
+.purpleBox_Top_Left {
+	background-image:url('../img/boxcornerheadersprite_alt.png');
+	background-position:0px 0px;
+	width:12px;
+	height:8px;
+}
+.purpleBox_Top_Middle {
+	background-image:url('../img/boxhorizontalsprite_alt.png');
+	background-repeat: repeat-x;
+	background-position:0px 0px;
+	width:100%;
+	height:8px;
+}
+.purpleBox_Top_Right {
+	background-image:url('../img/boxcornerheadersprite_alt.png');
+	background-position:-12px 0px;
+	width:12px;
+	height:8px;
+}
+.purpleBox_Left {
+	background-image:url('../img/boxverticalsprite_alt.png');
+	background-position:0px 0px;
+	background-repeat: repeat-y;
+	width:12px;
+}
+.purpleBox_Content {
+	background-image: url('../img/purpleparchment_pattern.jpg');
+	background-repeat:repeat;
+}
+.purpleBox_Right {
+	background-image:url('../img/boxverticalsprite_alt.png');
+	background-position:-12px 0px;
+	background-repeat: repeat-y;
+	width:12px;
+}
+.purpleBox_Bottom_Left {
+	background-image:url('../img/boxcornerheadersprite_alt.png');
+	background-position:0px -8px;
+	width:12px;
+	height:13px;
+}
+.purpleBox_Bottom_Middle {
+	background-image:url('../img/boxhorizontalsprite_alt.png');
+	background-repeat: repeat-x;
+	background-position:0px -8px;
+	width:100%;
+	height:13px;
+}
+.purpleBox_Bottom_Right {
+	background-image:url('../img/boxcornerheadersprite_alt.png');
+	background-position:-12px -8px;
+	width:12px;
+	height:13px;
+}
+/* Red Box Template
+🔥 Red box tuning 🔥
+
+#rb-tl {}
+#rb-tm {width:50px;}
+#rb-tr {}
+
+#rb-l {height:50px;}
+#rb-m {width:50px;}
+#rb-r {height:50px;}
+
+#rb-bl {}
+#rb-bm {width:50px;}
+#rb-br {}
+
+🔥 Red box tuning id 🔥
+
+id="rb-tl" 
+id="rb-tm" 
+id="rb-tr" 
+
+id="rb-l" 
+id="rb-m" 
+id="rb-r" 
+
+id="rb-bl" 
+id="rb-bm" 
+id="rb-br" 
+*/
+
+.ringContainer_Flex {
+	display:flex;
+}
+.ringBox_Top_Left {
+	background-image:url('../img/boxcornerheadersprite.png');
+	background-position:-200px 0px;
+	width:12px;
+	height:12px;
+}
+.ringBox_Top_Middle {
+	background-image:url('../img/boxhorizontalsprite.png');
+	background-repeat: repeat-x;
+	background-position:0px -69px;
+	height:8px;
+}
+.ringBox_Top_Right {
+	background-image:url('../img/boxcornerheadersprite.png');
+	background-position:-212px 0px;
+	width:12px;
+	height:12px;
+}
+.ringBox_Left {
+	background-image:url('../img/boxverticalsprite.png');
+	background-position:-78px 0px;
+	background-repeat: repeat-y;
+	width:7px;
+}
+.ringBox_Content {
+	
+}
+.ringBox_Right {
+	background-image:url('../img/boxverticalsprite.png');
+	background-position:-85px 0px;
+	background-repeat: repeat-y;
+	width:7px;
+}
+.ringBox_Bottom_Left {
+	background-image:url('../img/boxcornerheadersprite.png');
+	background-position:-200px -12px;
+	width:12px;
+	height:13px;
+}
+.ringBox_Bottom_Middle {
+	background-image:url('../img/boxhorizontalsprite.png');
+	background-repeat: repeat-x;
+	background-position:0px -69px;
+	height:8px;
+	margin-top:4px;
+}
+.ringBox_Bottom_Right {
+	background-image:url('../img/boxcornerheadersprite.png');
+	background-position:-212px -12px;
+	width:12px;
+	height:13px;
+}
+/* purple Box Template
+🔥 Blue box tuning 🔥
+
+#rgb-tl {}
+#rgb-tm {width:50px;}
+#rgb-tr {}
+
+#rgb-l {height:50px;}
+#rgb-m {width:50px;}
+#rgb-r {height:50px;}
+
+#rgb-bl {}
+#rgb-bm {width:50px;}
+#rgb-br {}
+
+🔥 Blue box tuning id 🔥
+
+id="rgb-tl" 
+id="rgb-tm" 
+id="rgb-tr" 
+
+id="rgb-l" 
+id="rgb-m" 
+id="rgb-r" 
+
+id="rgb-bl" 
+id="rgb-bm" 
+id="rgb-br" 
+*/

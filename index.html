@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <base target="_top">
-<title>Ironheart Bank | Wizard101 Free Online Game</title>
+	
+	<title>Ironheart Bank | Wizard101 Free Online Game</title>
 	<link rel="icon" href="img/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<link rel="stylesheet" type="text/css" href="css/parchment.css"/>
@@ -14,31 +15,75 @@
 	<link rel="stylesheet" type="text/css" href="css/tcbank.css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 	<script>
-		function getTime() {
-			document.getElementById("time").value = Date();
-		}
+		
 	</script>
+	<script>
+		
+	</script>
+	
+	
 </head>
-<body>
+<body onload="autoForm()">
 <div id="content-wrapper">
 	<div id="sidebar">
 		<div id="sideLogo">
-			<a href="https://www.wizard101.com/"><div id="logo"></div></a>
+			<a target="_blank" href="https://www.wizard101.com/"><div id="logo"></div></a>
 		</div>
 		<div id="sideMenu">
 			<div>
 				<div id="sideMenuTop"></div>
 				<div id="sideMenuMiddle">
-					<a href="https://www.wizard101.com/game?context=subscribe"><div id="loginButton"><span>Login</span></div></a>
-					<a href="https://twitter.com/theatmoplex?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><div class="sideMenuBanner"><span>Atmoplex Twitter</span></div></a>
-					<a href="https://www.wizard101central.com/wiki/Wizard101_Wiki"><div class="sideMenuBanner"><span>Wizard101 Wiki</span></div></a>
+					<a target="_blank" href="https://www.wizard101.com/game?context=subscribe"><div id="loginButton"><span>Login</span></div></a>
+					
+					<div id="tcSideMenu">
+					
+					<button id="importButton" type="button" onclick="document.getElementById('selectedFile').click();">
+						<input id="selectedFile" type="file" onchange="loadFile(this.files[0])" style="display: none;"></input>
+						<div class="buttonBox">			
+							<div class="buttonLeft"></div>
+							<div class="buttonMiddle" id="importLabel">Load</div>
+							<div class="buttonRight"></div>			
+						</div>
+					</button>
+					
+					<button id="exportButton" type="button" onclick="downloadSave()">
+						<div class="buttonBox">			
+							<div class="buttonLeft"></div>
+							<div class="buttonMiddle" id="exportLabel">Save</div>
+							<div class="buttonRight"></div>			
+						</div>
+					</button>
+					
+					<input type="text" style="width:132px; margin-bottom:10px;" id="saveName" placeholder="Custom Save Name" ></input>
+					
+					<button id="public_exportButton" type="button" onclick="downloadPublicSave()">
+						<div class="buttonBox">			
+							<div class="buttonLeft"></div>
+							<div class="buttonMiddle" id="exportLabel">Save (Public)</div>
+							<div class="buttonRight"></div>			
+						</div>
+					</button>
+					
+					</div>
+					
+					<a target="_blank"href="https://twitter.com/theatmoplex?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><div class="sideMenuBanner"><span>Atmoplex Twitter</span></div></a>
+					<a target="_blank"href="https://www.wizard101central.com/wiki/Wizard101_Wiki"><div class="sideMenuBanner"><span>Wizard101 Wiki</span></div></a>
+					<a target="_blank"href="https://discord.com/invite/gammastradingpost"><div class="sideMenuBanner"><span>GTP Discord</span></div></a>
+					
+					
 				</div>
 				<div id="sideMenuBottom"></div>
 			</div>
 			
 		</div>
+		
 	</div>
 	<!---->
+	<div class="ribbon">
+		<div class="ribbon-top"></div>
+		<div class="ribbon-middle"></div>
+		<div class="ribbon-bottom"></div>
+	</div>
 	<div id="parchment">
 		<div id="parchTop">
 			<div id="parchTopLeft">
@@ -65,107 +110,52 @@
 				<div id="middleContent_Head">
 					<div id="titleBox">
 						<h1>Wizard101</h1>
-						<h1>Ironheart Bank</h1>
+						<h1>TC Inventory</h1>
 					</div>
 				</div>
-				<div id="middleContent_Middle">
-					
-					<div class="contentDivide">
-						<div class="divideLeft">
-							<div id="tcfBanner" class="clearBanner">
-								<div class="clearBanner_Left"></div>
-								<div class="clearBanner_Middle"><span>Treasure Card Transaction</span></div>
-								<div class="clearBanner_Right"></div>
-							</div>
-							<div id="tcf-info">
-								<p><b>Note:</b>Variation isn't required.</p>
-							</div>
+				<div id="purpleBox-Totals">
 							
-							<div class="boxContainer" id="greenbox-form">
-								<div class="greenContainer_Flex">
-									<div id="gb-tl-form" class="greenBox_Top_Left"></div>
-									<div id="gb-tm-form" class="greenBox_Top_Middle"></div>
-									<div id="gb-tr-form" class="greenBox_Top_Right"></div>
+							<div class="boxContainer" id="purpleBox-data">
+								<div class="purpleContainer_Flex">
+									<div id="bb-tl-data" class="purpleBox_Top_Left"></div>
+									<div id="bb-tm-data" class="purpleBox_Top_Middle"></div>
+									<div id="bb-tr-data" class="purpleBox_Top_Right"></div>
 								</div>
-								<div class="greenContainer_Flex">
-									<div id="gb-l-form" class="greenBox_Left"></div>
-									<div id="gb-m-form" class="greenBox_Content">
+								<div class="purpleContainer_Flex">
+									<div id="bb-l-data" class="purpleBox_Left"></div>
+									<div id="bb-m-data" class="purpleBox_Content">
+										<div id="dataDiv" >
+											<div id="totalTable-div">
+												<table id="mytotal">
+													<thead>
+														<tr>
+															<th>Treasure Card</th>
+															<th>Total</th>
+														</tr>
+													</thead>
+													<tbody>
 										
-										<div id="formBox">
-											<form id="tc-form" name="submit-to-google-sheet">
-												
-												<div id="form-seg-1">
-													<label for="Account">Card Holder:</label><br>
-													<input type="text" id="account" name="Account" placeholder="Account" required>
-													<input type="text" id="character" name="Character" placeholder="Character" required>
-												</div>
-												<div id="form-seg-2">
-													<label for="treasure-card">Card Details:</label><br>
-													<input type="text" id="treasure-card" name="Treasure Card" placeholder="Treasure Card" required>
-													<input type="text" id="variation" name="Variation" placeholder="Variation">
-												</div>
-												<input type="number" id="amount" name="Amount" placeholder="Amount" required>
-												<input type="text" id="time" name="Time" step="1" readonly>
-												<br>
-												
-											
+													</tbody>
+												</table>
+											</div>
 										</div>
 									</div>
-									<div id="gb-r-form" class="greenBox_Right"></div>
+									<div id="bb-r-data" class="purpleBox_Right"></div>
 								</div>
-								<div class="greenContainer_Flex">
-									<div id="gb-bl-form" class="greenBox_Bottom_Left"></div>
-									<div id="gb-bm-form" class="greenBox_Bottom_Middle"></div>
-									<div id="gb-br-form" class="greenBox_Bottom_Right"></div>
-								</div>
-							</div>
-							<div id="formButtons">
-								<button type="submit" id="submitButton" onclick="getTime()"><div class="buttonBox">
-													
-									<div class="buttonLeft"></div>
-									<div class="buttonMiddle">Submit</div>
-									<div class="buttonRight"></div>
-													
-									</div></button>
-									<br>
-								<button id="reset" type="reset"><div class="buttonBox">
-													
-									<div class="buttonLeft"></div>
-									<div class="buttonMiddle">Reset</div>
-									<div class="buttonRight"></div>
-													
-									</div></button>
-							</div>
-							</form>
-						</div>
-						<div class="divideRight">
-							<div id="tcdBanner"class="clearBanner">
-								<div class="clearBanner_Left"></div>
-								<div class="clearBanner_Middle"><span>Treasure Card Sums</span></div>
-								<div class="clearBanner_Right"></div>
-							</div>
-							<div class="boxContainer" id="blueBox-data">
-								<div class="blueContainer_Flex">
-									<div id="bb-tl-data" class="blueBox_Top_Left"></div>
-									<div id="bb-tm-data" class="blueBox_Top_Middle"></div>
-									<div id="bb-tr-data" class="blueBox_Top_Right"></div>
-								</div>
-								<div class="blueContainer_Flex">
-									<div id="bb-l-data" class="blueBox_Left"></div>
-									<div id="bb-m-data" class="blueBox_Content">
-										<div id="dataDiv" ><iframe frameBorder="0" id="dataTable"  src="https://docs.google.com/spreadsheets/d/1JgprldWF5dUpQMX45S9fAikjTgBkBCFpMcnVvHTKQz4/htmlembed/sheet?gid=571947320&range=A:B"></iframe></div>
-									</div>
-									<div id="bb-r-data" class="blueBox_Right"></div>
-								</div>
-								<div class="blueContainer_Flex">
-									<div id="bb-bl-data" class="blueBox_Bottom_Left"></div>
-									<div id="bb-bm-data" class="blueBox_Bottom_Middle"></div>
-									<div id="bb-br-data" class="blueBox_Bottom_Right"></div>
+								<div class="purpleContainer_Flex">
+									<div id="bb-bl-data" class="purpleBox_Bottom_Left"></div>
+									<div id="bb-bm-data" class="purpleBox_Bottom_Middle"></div>
+									<div id="bb-br-data" class="purpleBox_Bottom_Right"></div>
 								</div>
 							</div>
 						</div>
+				<div id="middleContent_Middle">
+				
+				
+					<div id="clarify">
+						<p><b>Note:</b> Anything entered on this site will <b><u>NOT</u></b> be uploaded or saved to any external source. All data is stored locally through the save system. Though the form asks for an account, it's only use is an identifier. Anything could be placed (e.g. "1" or "id-x").</p>
+						<p>Using the public save option will create a version of your save that removes all account information and disables editing.</p>
 					</div>
-					
 					<div id="tciBanner" class="clearBanner">
 						<div class="clearBanner_Left"></div>
 						<div class="clearBanner_Middle"><span>Treasure Card Inventory</span></div>
@@ -179,7 +169,25 @@
 						</div>
 						<div class="redContainer_Flex">
 							<div id="rb-l-inventory" class="redBox_Left"></div>
-							<div id="rb-m-inventory" class="redBox_Content"><iframe frameBorder="0" marginwidth="0" id="inventoryTable"  src="https://docs.google.com/spreadsheets/d/1JgprldWF5dUpQMX45S9fAikjTgBkBCFpMcnVvHTKQz4/htmlembed/sheet?gid=1189171639&range=A:E"></iframe></div>
+							<div id="rb-m-inventory" class="redBox_Content">
+								<div id="inventoryTable-div">
+									<table border=1 id="mytab">
+									<thead>
+										<tr>
+											<th>Account</th>
+											<th>Character</th>
+											<th>Treasure Card</th>
+											<th>Variation</th>
+											<th>Amount</th>
+										</tr>
+									</thead>
+									<tbody>
+										
+									</tbody>
+								
+							</table>
+							</div>
+							</div>
 							<div id="rb-r-inventory" class="redBox_Right"></div>
 						</div>
 						<div class="redContainer_Flex">
@@ -188,6 +196,211 @@
 							<div id="rb-br-inventory" class="redBox_Bottom_Right"></div>
 						</div>
 					</div>
+					
+					
+					<div class="formBox"  onload="autoForm()">
+					
+						<form id="tc-form1" name="form1">
+							
+							<div class="form-seg-1-start">
+								<label for="Account">Account Details:</label><br>
+								<input type="text" onkeyup="autoForm()" class="account" id="act-1" name="Account" placeholder="Account" required><br>
+								<input type="text" onkeyup="autoForm()" class="character" id="char-1" name="Character" placeholder="Character" required>
+							</div>
+							
+							<div class="form-seg-2">
+								<label for="treasure-card">Treasure Card 1:</label><br>
+								<input type="text" onkeyup="autoForm()" onblur="changeImage(1)" id="tc-1" class="treasure-card" name="Treasure Card" placeholder="Treasure Card" required><br>
+								<input type="text" onkeyup="autoForm()" id="vari-1" class="variation" name="Variation" placeholder="Variation">
+							</div>
+							<input type="number" oninput="autoForm()" id="amt-1" class="amount" name="Amount" placeholder="Amount" required>
+							
+							<input type="text" class="time" id="time-1" name="Time" step="1" readonly>
+						</form>
+						
+						<div id="form2-4">
+						<form id="tc-form2" name="form2" class="sideForms">					
+							<div class="form-seg-1">
+								<input type="text" id="act-2" class="account" name="Account" placeholder="Account" readonly>
+								<input type="text" id="char-2" class="character" name="Character" placeholder="Character" readonly>
+							</div>
+							<div class="form-seg-2">
+								<label for="treasure-card">Treasure Card 2:</label><br>
+								<input type="text" onkeyup="autoForm()" onblur="changeImage(2)" id="tc-2" class="treasure-card" name="Treasure Card" placeholder="Treasure Card" required>
+								<input type="text" onkeyup="autoForm()" id="vari-2" class="variation" name="Variation" placeholder="Variation" >
+							</div>
+							<input type="number" oninput="autoForm()" class="amount" id="amt-2" name="Amount" placeholder="Amount" required>
+							<input type="text" class="time" id="time-2" name="Time" step="1" readonly>
+						</form>
+						
+						<form id="tc-form3" name="form3" class="sideForms">					
+							<div class="form-seg-1">
+								<input type="text" id="act-3" class="account" name="Account" placeholder="Account" readonly>
+								<input type="text" id="char-3" class="character" name="Character" placeholder="Character" readonly>
+							</div>
+							<div class="form-seg-2">
+								<label for="treasure-card">Treasure Card 3:</label><br>
+								<input type="text" onkeyup="autoForm()" onblur="changeImage(3)" id="tc-3" class="treasure-card" name="Treasure Card" placeholder="Treasure Card" required>
+								<input type="text" onkeyup="autoForm()" class="variation" id="vari-3" name="Variation" placeholder="Variation" >
+							</div>
+							<input type="number" oninput="autoForm()" class="amount" id="amt-3" name="Amount" placeholder="Amount" required>
+							<input type="text" class="time" id="time-3" name="Time" step="1" readonly>
+						</form>
+						
+						<form id="tc-form4" name="form4" class="sideForms">					
+							<div class="form-seg-1">
+								<input type="text" id="act-4" class="account" name="Account" placeholder="Account" readonly>
+								<input type="text" id="char-4" class="character" name="Character" placeholder="Character" readonly>
+							</div>
+							<div class="form-seg-2">
+								<label for="treasure-card">Treasure Card 4:</label><br>
+								<input type="text" onkeyup="autoForm()" onblur="changeImage(4)" id="tc-4" class="treasure-card" name="Treasure Card" placeholder="Treasure Card" required>
+								<input type="text" onkeyup="autoForm()" id="vari-4" class="variation" name="Variation" placeholder="Variation" >
+							</div>
+							<input type="number" oninput="autoForm()" class="amount" id="amt-4" name="Amount" placeholder="Amount" required>
+							<input type="text" class="time" id="time-4" name="Time" step="1" readonly>
+						</form>
+					</div>
+					</div>
+					
+					<button type="button" id="submitButton">Submit</button>
+					
+					<button id="resetBox" type="button" onclick="clearForms()">
+						<div class="buttonBox">				
+							<div class="buttonLeft"></div>
+							<div class="buttonMiddle" id="resetButton">Reset Forms</div>
+							<div class="buttonRight"></div>			
+						</div>
+					</button>
+						
+					
+							
+					<div id="tcfBanner" class="clearBanner">
+								<div class="clearBanner_Left"></div>
+								<div class="clearBanner_Middle"><span>Treasure Card Profiles</span></div>
+								<div class="clearBanner_Right"></div>
+							</div>
+							
+							<div class="boxContainer" id="greenbox-form">
+								<div class="greenContainer_Flex">
+									<div id="gb-tl-form" class="greenBox_Top_Left"></div>
+									<div id="gb-tm-form" class="greenBox_Top_Middle"></div>
+									<div id="gb-tr-form" class="greenBox_Top_Right"></div>
+								</div>
+								<div class="greenContainer_Flex">
+									<div id="gb-l-form" class="greenBox_Left"></div>
+									<div id="gb-m-form" class="greenBox_Content">
+										<div id="tcTradeWindow">
+											<div class="tcHalf">
+												<div class="tcImageContainer">
+													<div class="tcImage-div" style="width: 127px; height: 195px; overflow: hidden">
+														<iframe class="tc-box" id="tc-box-1" style="position: relative; left: -259px; top: -762px" loading="lazy" sandbox = "allow-same-origin" scrolling=no frameBorder="0" width="438" height="960" src="about:blank"></iframe>
+													</div>
+													<div class="boxContainer ringbox-tc">
+														<div class="ringContainer_Flex">
+															<div class="ringBox_Top_Left rgb-tl-tc"></div>
+															<div class="ringBox_Top_Middle rgb-tm-tc"></div>
+															<div class="ringBox_Top_Right rgb-tr-tc"></div>
+														</div>
+														<div class="ringContainer_Flex">
+															<div class="ringBox_Left rgb-l-tc"></div>
+															<div class="ringBox_Content rgb-m-tc"></div>
+															<div class="ringBox_Right rgb-r-tc"></div>
+														</div>
+														<div class="ringContainer_Flex">
+															<div class="ringBox_Bottom_Left rgb-bl-tc"></div>
+															<div class="ringBox_Bottom_Middle rgb-bm-tc"></div>
+															<div class="ringBox_Bottom_Right rgb-br-tc"></div>
+														</div>
+													</div>
+												</div>
+												<div class="tcImageContainer">
+													<div class="tcImage-div" style="width: 127px; height: 195px; overflow: hidden">
+														<iframe class="tc-box" id="tc-box-2" style="position: relative; left: -259px; top: -762px" loading="lazy" sandbox = "allow-same-origin" scrolling=no frameBorder="0" width="438" height="960" src="about:blank"></iframe>
+													</div>
+													<div class="boxContainer ringbox-tc">
+														<div class="ringContainer_Flex">
+															<div class="ringBox_Top_Left rgb-tl-tc"></div>
+															<div class="ringBox_Top_Middle rgb-tm-tc"></div>
+															<div class="ringBox_Top_Right rgb-tr-tc"></div>
+														</div>
+														<div class="ringContainer_Flex">
+															<div class="ringBox_Left rgb-l-tc"></div>
+															<div class="ringBox_Content rgb-m-tc"></div>
+															<div class="ringBox_Right rgb-r-tc"></div>
+														</div>
+														<div class="ringContainer_Flex">
+															<div class="ringBox_Bottom_Left rgb-bl-tc"></div>
+															<div class="ringBox_Bottom_Middle rgb-bm-tc"></div>
+															<div class="ringBox_Bottom_Right rgb-br-tc"></div>
+														</div>
+													</div>
+												</div>
+												<div class="tcImageContainer">
+													<div class="tcImage-div" style="width: 127px; height: 195px; overflow: hidden">
+														<iframe class="tc-box" id="tc-box-3" style="position: relative; left: -259px; top: -762px" loading="lazy" sandbox = "allow-same-origin" scrolling=no frameBorder="0" width="438" height="960" src="about:blank"></iframe>
+													</div>
+													<div class="boxContainer ringbox-tc">
+														<div class="ringContainer_Flex">
+															<div class="ringBox_Top_Left rgb-tl-tc"></div>
+															<div class="ringBox_Top_Middle rgb-tm-tc"></div>
+															<div class="ringBox_Top_Right rgb-tr-tc"></div>
+														</div>
+														<div class="ringContainer_Flex">
+															<div class="ringBox_Left rgb-l-tc"></div>
+															<div class="ringBox_Content rgb-m-tc"></div>
+															<div class="ringBox_Right rgb-r-tc"></div>
+														</div>
+														<div class="ringContainer_Flex">
+															<div class="ringBox_Bottom_Left rgb-bl-tc"></div>
+															<div class="ringBox_Bottom_Middle rgb-bm-tc"></div>
+															<div class="ringBox_Bottom_Right rgb-br-tc"></div>
+														</div>
+													</div>
+												</div>
+												<div class="tcImageContainer">
+													<div class="tcImage-div" style="width: 127px; height: 195px; overflow: hidden">
+														<iframe class="tc-box" id="tc-box-4" style="position: relative; left: -259px; top: -762px" loading="lazy" sandbox = "allow-same-origin" scrolling=no frameBorder="0" width="438" height="960" src="about:blank"></iframe>
+													</div>
+													<div class="boxContainer ringbox-tc">
+														<div class="ringContainer_Flex">
+															<div class="ringBox_Top_Left rgb-tl-tc"></div>
+															<div class="ringBox_Top_Middle rgb-tm-tc"></div>
+															<div class="ringBox_Top_Right rgb-tr-tc"></div>
+														</div>
+														<div class="ringContainer_Flex">
+															<div class="ringBox_Left rgb-l-tc"></div>
+															<div class="ringBox_Content rgb-m-tc"></div>
+															<div class="ringBox_Right rgb-r-tc"></div>
+														</div>
+														<div class="ringContainer_Flex">
+															<div id="rgb-bl-tc" class="ringBox_Bottom_Left rgb-bl-tc"></div>
+															<div class="ringBox_Bottom_Middle rgb-bm-tc"></div>
+															<div class="ringBox_Bottom_Right rgb-br-tc"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div id="tcwTop" class="tcHalf">
+												
+											</div>
+											<div id="tcwBottom">
+												
+											</div>
+										</div>
+									</div>
+									<div id="gb-r-form" class="greenBox_Right"></div>
+								</div>
+								<div class="greenContainer_Flex">
+									<div id="gb-bl-form" class="greenBox_Bottom_Left"></div>
+									<div id="gb-bm-form" class="greenBox_Bottom_Middle"></div>
+									<div id="gb-br-form" class="greenBox_Bottom_Right"></div>
+								</div>
+							</div>
+					
+					
+					
+					
 					
 				</div>
 				<div id="middleContent_Bottom">
@@ -218,25 +431,14 @@
 	</div>
 </div>
 <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyXdt2VeSvPLp2dWz4NU4tRr3Gg4iN4ZLT2RdJKiw1FLKRL564se4Ck89Ga8bxRs7GD/exec'
-    const form = document.forms['submit-to-google-sheet']
 
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => document.getElementById('inventoryTable').src += '')
-		.then(response => document.getElementById('dataTable').src += '')
-		//.then(response => console.log('Success!', response))
-        //.catch(error => console.error('Error!', error.message));
-		//document.getElementById('inventoryTable').src += '';
-		
-    });
 </script>
+<script src="./js/core.js" type="text/javascript"></script>
 <script>
-function onLoadHandler() {
-    console.clear();
-}
+	window.onload = autoForm()
+	window.onload = clearJson()
 </script>
+
 </body>
 </html>
 
