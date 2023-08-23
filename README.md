@@ -62,6 +62,7 @@ When you are done entering treasure cards on the top left of the page are the sa
 
 ## Treasure card profiles **(Offline version only)**
 
-If you are using the offline version downloaded here then as you fill out the treasure card forms the profile box will show images of the treasure cards you enter as you fill out the form.
+- If you are using the offline version downloaded here then as you fill out the treasure card forms the profile box will show images of the treasure cards you enter as you fill out the form.
+**(Note: If the profile boxes aren't loading, click on one of your treasure card links and allow it to load then try again.)**
 
 ![image](https://github.com/nohtsa/tc-inventory/assets/19295987/bc5397e3-f2c6-42bb-98e9-61e8a3c1bcb7)
