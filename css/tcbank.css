@@ -422,7 +422,12 @@ tbody {
 	padding-bottom:10px;
 }
 
-
+#offlineOnly {
+	text-align:center;
+	color:#FFFFFF;
+	font-family: wiz-fancy;
+	line-height:75px;
+}
 
 
 
