@@ -6,32 +6,7 @@ function timeBlock(x,y) {
 				document.getElementById("time-"+x).value = Date();
 			};
 		};
-function changeImage(x) {
-			const tcValues = [
-				document.querySelector('#tc-1').value,
-				document.querySelector('#tc-2').value,
-				document.querySelector('#tc-3').value,
-				document.querySelector('#tc-4').value
-			];
 
-			const tcBoxElements = [
-				document.getElementById('tc-box-1'),
-				document.getElementById('tc-box-2'),
-				document.getElementById('tc-box-3'),
-				document.getElementById('tc-box-4')
-			];
-
-		if (x >= 1 && x <= 4) {
-			const tcValue = tcValues[x - 1];
-			const tcBoxElement = tcBoxElements[x - 1];
-
-			if (tcValue !== "") {
-				tcBoxElement.setAttribute('src', `https://www.wizard101central.com/wiki/File:(Treasure_Card)_${tcValue}.png`);
-			} else {
-				tcBoxElement.setAttribute('src', "");
-			}
-		}
-		}
 function clearX(x,y) {
 				if (y == 0) {
 					alert("test");
@@ -98,9 +73,7 @@ function clearX(x,y) {
 					document.querySelector("#act-"+x).value = null
 				};
 				
-				if (y == 14) {
-					document.getElementById("tc-box-"+x).setAttribute('src', "")
-				};
+				
 				
 				if (y == 15) {
 					document.querySelector('#act-4').value = null
@@ -121,25 +94,7 @@ function clearX(x,y) {
 					document.querySelector('#char-2').value = null
 				};
 				
-				if (y == 18) {
-					document.getElementById("tc-box-2").setAttribute('src', "")
-					document.getElementById("tc-box-3").setAttribute('src', "")
-				};
-				if (y == 19) {
-					document.getElementById("tc-box-3").setAttribute('src', "")
-					document.getElementById("tc-box-4").setAttribute('src', "")
-				};
-				if (y == 20) {
-					document.getElementById("tc-box-2").setAttribute('src', "")
-					document.getElementById("tc-box-3").setAttribute('src', "")
-					document.getElementById("tc-box-4").setAttribute('src', "")
-				};
-				if (y == 21) {
-					document.getElementById("tc-box-1").setAttribute('src', "")
-					document.getElementById("tc-box-2").setAttribute('src', "")
-					document.getElementById("tc-box-3").setAttribute('src', "")
-					document.getElementById("tc-box-4").setAttribute('src', "")
-				};
+				
 				
 			};
 function lock(x) {
@@ -234,7 +189,7 @@ function lock(x) {
 				clearX(2,2)
 				clearX(3,2)
 				clearX(4,2)
-				clearX(0,21)
+				
 			}
 			if (ac1) {
 				submitCheck()
@@ -301,7 +256,7 @@ function lock(x) {
 								if (!am2 || (am2 == 0)) {
 									clearX(3,2)
 									clearX(4,2)
-									clearX(0,19)
+									
 									clearX(0,16)
 									timeBlock(2,0)
 									submitCheck()
@@ -321,7 +276,7 @@ function lock(x) {
 							clearX(2,2)
 							clearX(3,2)
 							clearX(4,2)
-							clearX(0,20)
+							
 							clearX(0,17)
 							submitCheck()
 						};
@@ -483,7 +438,7 @@ var tcjson = []
 	else {
 		var ampm = "AM"
 	}
-	var time = formatTime + "-" + today.getMinutes() + "-" + ampm;
+	var time = formatTime + "-" + today.getMinutes() + ampm;
 	var dateTime = date+'_'+time;
 	
     const content = JSON.stringify(tcjson);
@@ -520,18 +475,25 @@ var tcjson = []
 	else {
 		var ampm = "AM"
 	}
-	var time = formatTime + "⁚" + today.getMinutes() + "⁚" + today.getSeconds() + ampm;
+	var time = formatTime + "-" + today.getMinutes() + ampm;
 	var dateTime = date+' '+time;
+	
+	var publicData = tcjson
+	
+	for(var i=0; i<publicData.length; i++){
+		publicData[i].account = "N/A"
+		
+	}
 	
     const content = JSON.stringify(publicData);
 	var name = document.querySelector("#saveName").value
 		
 	var fileName
 	if (name == "") {
-		fileName = "tc(PUBLIC).bank"
+		fileName = "tc_(PUBLIC).bank"
 	}
 	else {
-		fileName = name+"(PUBLIC).bank"
+		fileName = name+"_(PUBLIC).bank"
 	}
 	
     const contentType = 'text/plain';
