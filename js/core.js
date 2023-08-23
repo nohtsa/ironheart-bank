@@ -1,3 +1,47 @@
+	async function test(x) {
+	
+	
+	
+	
+	
+    const act = document.querySelector('#act-'+x).value;
+    const char = document.querySelector('#char-'+x).value;
+    const tc = document.querySelector('#tc-'+x).value;
+    const vari = document.querySelector('#vari-'+x).value;
+    const amt = parseFloat(document.querySelector('#amt-'+x).value);
+	
+	
+    dict = {}
+	dict['account'] = act
+	dict['character'] = char
+	dict['treasurecard'] = tc
+	dict['variation'] = vari
+	dict['amount'] = amt
+    
+    const matchingPosts = tcjson.filter(post =>
+        post.account.includes(act) &&
+        post.character.includes(char) &&
+        post.treasurecard.includes(tc) &&
+        post.variation === vari
+    );
+	
+	
+
+    if (matchingPosts.length > 0) {
+       null
+    } else {
+        
+        newRow();
+    }
+
+    for (const post of matchingPosts) {
+        const tcamt = parseFloat(post.amount);
+        post.amount = tcamt + amt;
+    }
+
+    makeTable();
+}
+
 function timeBlock(x,y) {
 			if (y==0) {
 				document.getElementById("time-"+x).value = null;
@@ -6,8 +50,33 @@ function timeBlock(x,y) {
 				document.getElementById("time-"+x).value = Date();
 			};
 		};
+function changeImage(x) {
+			const tcValues = [
+				document.querySelector('#tc-1').value,
+				document.querySelector('#tc-2').value,
+				document.querySelector('#tc-3').value,
+				document.querySelector('#tc-4').value
+			];
 
-function clearX(x,y) {
+			const tcBoxElements = [
+				document.getElementById('tc-box-1'),
+				document.getElementById('tc-box-2'),
+				document.getElementById('tc-box-3'),
+				document.getElementById('tc-box-4')
+			];
+
+		if (x >= 1 && x <= 4) {
+			const tcValue = tcValues[x - 1];
+			const tcBoxElement = tcBoxElements[x - 1];
+
+			if (tcValue !== "") {
+				tcBoxElement.setAttribute('src', `https://www.wizard101central.com/wiki/File:(Treasure_Card)_${tcValue}.png`);
+			} else {
+				tcBoxElement.setAttribute('src', "");
+			}
+		}
+		}
+async function clearX(x,y) {
 				if (y == 0) {
 					alert("test");
 				};
@@ -73,7 +142,9 @@ function clearX(x,y) {
 					document.querySelector("#act-"+x).value = null
 				};
 				
-				
+				if (y == 14) {
+					document.getElementById("tc-box-"+x).setAttribute('src', "")
+				};
 				
 				if (y == 15) {
 					document.querySelector('#act-4').value = null
@@ -94,7 +165,25 @@ function clearX(x,y) {
 					document.querySelector('#char-2').value = null
 				};
 				
-				
+				if (y == 18) {
+					document.getElementById("tc-box-2").setAttribute('src', "")
+					document.getElementById("tc-box-3").setAttribute('src', "")
+				};
+				if (y == 19) {
+					document.getElementById("tc-box-3").setAttribute('src', "")
+					document.getElementById("tc-box-4").setAttribute('src', "")
+				};
+				if (y == 20) {
+					document.getElementById("tc-box-2").setAttribute('src', "")
+					document.getElementById("tc-box-3").setAttribute('src', "")
+					document.getElementById("tc-box-4").setAttribute('src', "")
+				};
+				if (y == 21) {
+					document.getElementById("tc-box-1").setAttribute('src', "")
+					document.getElementById("tc-box-2").setAttribute('src', "")
+					document.getElementById("tc-box-3").setAttribute('src', "")
+					document.getElementById("tc-box-4").setAttribute('src', "")
+				};
 				
 			};
 function lock(x) {
@@ -136,7 +225,7 @@ function lock(x) {
 			clearX(3,3)
 			clearX(4,3)
 		}
-		function autoForm() {
+		async function autoForm() {
 			var am1 = document.querySelector('#amt-1').value;
 			var ac1 = document.querySelector('#act-1').value;
 			var ch1 = document.querySelector('#char-1').value;
@@ -189,7 +278,7 @@ function lock(x) {
 				clearX(2,2)
 				clearX(3,2)
 				clearX(4,2)
-				
+				clearX(0,21)
 			}
 			if (ac1) {
 				submitCheck()
@@ -256,7 +345,7 @@ function lock(x) {
 								if (!am2 || (am2 == 0)) {
 									clearX(3,2)
 									clearX(4,2)
-									
+									clearX(0,19)
 									clearX(0,16)
 									timeBlock(2,0)
 									submitCheck()
@@ -276,7 +365,7 @@ function lock(x) {
 							clearX(2,2)
 							clearX(3,2)
 							clearX(4,2)
-							
+							clearX(0,20)
 							clearX(0,17)
 							submitCheck()
 						};
@@ -312,6 +401,8 @@ var tcjson = []
 		tcjson = JSON.parse(json)
 		baseLength = tcjson.length
 		
+		
+		
 		if (file.name.includes("PUBLIC")) {
 			clearX(1,3)
 		}
@@ -339,94 +430,24 @@ var tcjson = []
 		tcjson = []
 	}
 	
-	function makeTable() {
-		tcjson = tcjson.sort((a, b) => {
-			if (a.character < b.character) {
-				return -1;
-			}
-		});
-		for(var i = 1;i<maintab.rows.length;){
-            maintab.deleteRow(i);
-        }
-		for(var i = 1;i<maintotal.rows.length;){
-            maintotal.deleteRow(i);
-        }
-		dup = []
-		for(var i=0; i<tcjson.length; i++){
-
-			if (!tcjson[i].amount==0) {
-				maintab.innerHTML += "<tr> <td>"+ tcjson[i].account + "</td><td>" + tcjson[i].character + "</td><td><a target=\"_blank\" href=\"https://www.wizard101central.com/wiki/TreasureCard:" + tcjson[i].treasurecard+"\">"+tcjson[i].treasurecard+"</a></td> <td>"+tcjson[i].variation+"</td> <td>"+tcjson[i].amount+"</td> <tr>";
-				count = 0
-				filtered = tcjson.filter(item => item.treasurecard === tcjson[i].treasurecard);
-				if (!dup.includes(tcjson[i].treasurecard)) {
-					for(var b=0; b<filtered.length;b++){
-					count += filtered[b].amount
-				}
-				dup.push(tcjson[i].treasurecard)
-				maintotal.innerHTML += "<tr> <td><a target=\"_blank\" href=\"https://www.wizard101central.com/wiki/TreasureCard:"+tcjson[i].treasurecard + "\">"+tcjson[i].treasurecard+"</a></td><td>" + count + "</td></tr>";
-
-			}
-				
-			}
-			
-		}
-		
-		
-	};
 	
-	function newRow() {
+	async function newRow() {
 		tcjson.push(dict)
 		baseLength = tcjson.length
 		makeTable()
 	}
 	
 	
-	function test(x) {
-	
-	
-	
-	
-	
-    const act = document.querySelector('#act-'+x).value;
-    const char = document.querySelector('#char-'+x).value;
-    const tc = document.querySelector('#tc-'+x).value;
-    const vari = document.querySelector('#vari-'+x).value;
-    const amt = parseFloat(document.querySelector('#amt-'+x).value);
-	
-	
-    dict = {}
-	dict['account'] = act
-	dict['character'] = char
-	dict['treasurecard'] = tc
-	dict['variation'] = vari
-	dict['amount'] = amt
-    
-    const matchingPosts = tcjson.filter(post =>
-        post.account.includes(act) &&
-        post.character.includes(char) &&
-        post.treasurecard.includes(tc) &&
-        post.variation === vari
-    );
-	
-	
-
-    if (matchingPosts.length > 0) {
-       null
-    } else {
-        
-        newRow();
-    }
-
-    for (const post of matchingPosts) {
-        const tcamt = parseFloat(post.amount);
-        post.amount = tcamt + amt;
-    }
-
-    makeTable();
-}
+	async function sortData() {
+		tcjson = tcjson.sort((a, b) => {
+			if (a.character < b.character) {
+				return -1;
+			}
+		});
+	}
   
   function downloadSave() {
-
+	sortData()
 	var today = new Date();
 	var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 	var formatTime = today.getHours()
@@ -462,7 +483,7 @@ var tcjson = []
 }
 
   function downloadPublicSave() {
-	
+	sortData()
 	
 	var today = new Date();
 	var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
@@ -479,10 +500,8 @@ var tcjson = []
 	var dateTime = date+' '+time;
 	
 	var publicData = tcjson
-	
 	for(var i=0; i<publicData.length; i++){
 		publicData[i].account = "N/A"
-		
 	}
 	
     const content = JSON.stringify(publicData);
@@ -490,10 +509,10 @@ var tcjson = []
 		
 	var fileName
 	if (name == "") {
-		fileName = "tc_(PUBLIC).bank"
+		fileName = "tc(PUBLIC).bank"
 	}
 	else {
-		fileName = name+"_(PUBLIC).bank"
+		fileName = name+"(PUBLIC).bank"
 	}
 	
     const contentType = 'text/plain';
@@ -543,3 +562,34 @@ var subButton = document.getElementById("submitButton");
 			clearX(4,14)
 			clearX(4,3)
 	});
+	
+	async function makeTable() {
+		
+		for(var i = 1;i<maintab.rows.length;){
+            maintab.deleteRow(i);
+        }
+		for(var i = 1;i<maintotal.rows.length;){
+            maintotal.deleteRow(i);
+        }
+		dup = []
+		for(var i=0; i<tcjson.length; i++){
+
+			if (!tcjson[i].amount==0) {
+				maintab.innerHTML += "<tr> <td>"+ tcjson[i].account + "</td><td>" + tcjson[i].character + "</td><td><a target=\"_blank\" href=\"https://www.wizard101central.com/wiki/TreasureCard:" + tcjson[i].treasurecard+"\">"+tcjson[i].treasurecard+"</a></td> <td>"+tcjson[i].variation+"</td> <td>"+tcjson[i].amount+"</td> <tr>";
+				count = 0
+				filtered = tcjson.filter(item => item.treasurecard === tcjson[i].treasurecard);
+				if (!dup.includes(tcjson[i].treasurecard)) {
+					for(var b=0; b<filtered.length;b++){
+					count += filtered[b].amount
+				}
+				dup.push(tcjson[i].treasurecard)
+				maintotal.innerHTML += "<tr> <td><a target=\"_blank\" href=\"https://www.wizard101central.com/wiki/TreasureCard:"+tcjson[i].treasurecard + "\">"+tcjson[i].treasurecard+"</a></td><td>" + count + "</td></tr>";
+
+			}
+				
+			}
+			
+		}
+		
+		
+	};
